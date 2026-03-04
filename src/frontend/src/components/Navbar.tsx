@@ -74,14 +74,6 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-md bg-white p-1 shadow-sm">
-                <img
-                  src="/assets/uploads/wt-1.webp"
-                  alt="Wealth Trust Logo"
-                  className="w-full h-full object-contain"
-                  style={{ display: "block", minWidth: 40, minHeight: 40 }}
-                />
-              </div>
               <div className="flex flex-col leading-none">
                 <span className="font-display font-semibold text-lg md:text-xl text-[oklch(0.92_0.01_90)] tracking-tight group-hover:text-[oklch(0.75_0.12_75)] transition-colors duration-200">
                   Wealth Trust

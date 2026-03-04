@@ -233,33 +233,38 @@ export function HomePage() {
       <section
         id="about"
         data-ocid="about.section"
-        className="py-20 md:py-32 bg-[oklch(0.17_0.066_258)]"
+        className="py-20 md:py-32 bg-white"
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left: Logo with decorative treatment */}
+            {/* Left: WT monogram with decorative treatment */}
             <Section className="relative flex items-center justify-center">
               <div className="relative w-72 h-72 md:w-96 md:h-96">
                 {/* Outer decorative ring */}
-                <div className="absolute inset-0 rounded-full border border-[oklch(0.75_0.12_75/0.15)] animate-float" />
-                <div className="absolute inset-4 rounded-full border border-[oklch(0.75_0.12_75/0.1)]" />
+                <div className="absolute inset-0 rounded-full border border-[oklch(0.75_0.12_75/0.25)] animate-float" />
+                <div className="absolute inset-4 rounded-full border border-[oklch(0.75_0.12_75/0.15)]" />
                 {/* Glow */}
-                <div className="absolute inset-0 rounded-full bg-[oklch(0.75_0.12_75/0.05)] blur-2xl" />
-                {/* Logo */}
+                <div className="absolute inset-0 rounded-full bg-[oklch(0.75_0.12_75/0.06)] blur-2xl" />
+                {/* WT Monogram */}
                 <motion.div
                   className="absolute inset-8 flex items-center justify-center"
                   variants={fadeInUp}
                 >
-                  <img
-                    src="/assets/generated/wealthtrust-logo-transparent.dim_400x400.png"
-                    alt="Wealth Trust"
-                    className="w-full h-full object-contain drop-shadow-[0_0_30px_oklch(0.75_0.12_75/0.4)]"
-                  />
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-[oklch(0.16_0.065_258)] to-[oklch(0.22_0.08_258)] flex items-center justify-center shadow-[0_0_40px_oklch(0.75_0.12_75/0.2)] border border-[oklch(0.75_0.12_75/0.2)]">
+                    <div className="text-center">
+                      <div className="font-display font-semibold text-5xl md:text-6xl text-[oklch(0.75_0.12_75)] leading-none tracking-tighter">
+                        WT
+                      </div>
+                      <div className="font-body text-[10px] text-[oklch(0.65_0.04_258)] uppercase tracking-[0.25em] mt-1">
+                        Est. 2020
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
 
                 {/* Value prop mini-cards */}
                 <motion.div
-                  className="absolute -left-4 top-1/4 bg-[oklch(0.2_0.07_258)] border border-[oklch(0.28_0.06_258)] rounded-sm p-3 shadow-navy"
+                  className="absolute -left-4 top-1/4 bg-white border border-gray-200 rounded-sm p-3 shadow-md"
                   variants={{
                     hidden: { opacity: 0, x: -20 },
                     visible: { opacity: 1, x: 0, transition: { delay: 0.4 } },
@@ -268,13 +273,13 @@ export function HomePage() {
                   <div className="font-body text-xs text-[oklch(0.75_0.12_75)] font-semibold">
                     15+ Years
                   </div>
-                  <div className="font-body text-xs text-[oklch(0.6_0.04_258)]">
+                  <div className="font-body text-xs text-[oklch(0.45_0.04_258)]">
                     Combined Expertise
                   </div>
                 </motion.div>
 
                 <motion.div
-                  className="absolute -right-4 bottom-1/4 bg-[oklch(0.2_0.07_258)] border border-[oklch(0.28_0.06_258)] rounded-sm p-3 shadow-navy"
+                  className="absolute -right-4 bottom-1/4 bg-white border border-gray-200 rounded-sm p-3 shadow-md"
                   variants={{
                     hidden: { opacity: 0, x: 20 },
                     visible: { opacity: 1, x: 0, transition: { delay: 0.5 } },
@@ -283,7 +288,7 @@ export function HomePage() {
                   <div className="font-body text-xs text-[oklch(0.75_0.12_75)] font-semibold">
                     Holistic
                   </div>
-                  <div className="font-body text-xs text-[oklch(0.6_0.04_258)]">
+                  <div className="font-body text-xs text-[oklch(0.45_0.04_258)]">
                     Wealth Planning
                   </div>
                 </motion.div>
@@ -300,7 +305,7 @@ export function HomePage() {
 
               <motion.h2
                 variants={fadeInUp}
-                className="font-display font-semibold text-4xl md:text-5xl text-[oklch(0.92_0.01_90)] leading-tight mb-6"
+                className="font-display font-semibold text-4xl md:text-5xl text-[oklch(0.16_0.065_258)] leading-tight mb-6"
               >
                 Your Trusted Partner in{" "}
                 <span className="text-[oklch(0.75_0.12_75)]">
@@ -309,18 +314,18 @@ export function HomePage() {
               </motion.h2>
 
               <motion.div variants={fadeInUp} className="space-y-4 mb-8">
-                <p className="font-body text-[oklch(0.68_0.04_258)] leading-relaxed">
+                <p className="font-body text-[oklch(0.35_0.04_258)] leading-relaxed">
                   Wealth Trust Investment Services is led by Pankhuri Tayal, an
                   AMFI Registered Mutual Fund Distributor dedicated to helping
                   individuals and families build lasting financial security.
                 </p>
-                <p className="font-body text-[oklch(0.68_0.04_258)] leading-relaxed">
+                <p className="font-body text-[oklch(0.35_0.04_258)] leading-relaxed">
                   We believe every investor deserves a personalized strategy.
                   Our approach combines deep market knowledge with a genuine
                   understanding of your life goals — be it education,
                   retirement, or legacy planning.
                 </p>
-                <p className="font-body text-[oklch(0.68_0.04_258)] leading-relaxed">
+                <p className="font-body text-[oklch(0.35_0.04_258)] leading-relaxed">
                   From mutual funds to portfolio management and alternate
                   investments, we offer comprehensive solutions under one roof,
                   with transparent communication at every step.
@@ -357,14 +362,14 @@ export function HomePage() {
                   <motion.div
                     key={item.title}
                     variants={fadeInUp}
-                    className="flex items-start gap-3 p-4 bg-[oklch(0.2_0.07_258)] border border-[oklch(0.26_0.065_258)] rounded-sm hover:border-[oklch(0.75_0.12_75/0.3)] transition-colors duration-200"
+                    className="flex items-start gap-3 p-4 bg-gray-50 border border-gray-200 rounded-sm hover:border-[oklch(0.75_0.12_75/0.5)] hover:bg-white transition-colors duration-200"
                   >
                     <item.icon className="w-4 h-4 text-[oklch(0.75_0.12_75)] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-body text-sm font-semibold text-[oklch(0.85_0.01_90)]">
+                      <div className="font-body text-sm font-semibold text-[oklch(0.16_0.065_258)]">
                         {item.title}
                       </div>
-                      <div className="font-body text-xs text-[oklch(0.6_0.04_258)]">
+                      <div className="font-body text-xs text-[oklch(0.5_0.04_258)]">
                         {item.desc}
                       </div>
                     </div>
@@ -394,7 +399,7 @@ export function HomePage() {
       <section
         id="services"
         data-ocid="services.section"
-        className="py-20 md:py-32 bg-[oklch(0.16_0.065_258)]"
+        className="py-20 md:py-32 bg-white"
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <Section className="text-center mb-14">
@@ -405,7 +410,7 @@ export function HomePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="font-display font-semibold text-4xl md:text-5xl text-[oklch(0.92_0.01_90)] leading-tight"
+              className="font-display font-semibold text-4xl md:text-5xl text-[oklch(0.16_0.065_258)] leading-tight"
             >
               Comprehensive Investment Solutions
             </motion.h2>
@@ -416,7 +421,7 @@ export function HomePage() {
           </Section>
 
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -430,15 +435,15 @@ export function HomePage() {
                 key={service.title}
                 data-ocid={`services.item.${i + 1}`}
                 variants={fadeInUp}
-                className="group p-6 bg-[oklch(0.2_0.07_258)] border border-[oklch(0.26_0.065_258)] rounded-sm hover:border-[oklch(0.75_0.12_75/0.4)] hover:bg-[oklch(0.22_0.07_258)] hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_oklch(0.1_0.05_258/0.6)]"
+                className="group p-8 bg-gray-50 border border-gray-200 rounded-sm hover:border-[oklch(0.75_0.12_75/0.5)] hover:bg-white hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_oklch(0.75_0.12_75/0.12)]"
               >
-                <div className="w-10 h-10 rounded-sm bg-[oklch(0.75_0.12_75/0.1)] border border-[oklch(0.75_0.12_75/0.2)] flex items-center justify-center mb-4 group-hover:bg-[oklch(0.75_0.12_75/0.2)] transition-colors duration-200">
-                  <service.icon className="w-5 h-5 text-[oklch(0.75_0.12_75)]" />
+                <div className="w-12 h-12 rounded-sm bg-[oklch(0.75_0.12_75/0.1)] border border-[oklch(0.75_0.12_75/0.25)] flex items-center justify-center mb-5 group-hover:bg-[oklch(0.75_0.12_75/0.18)] transition-colors duration-200">
+                  <service.icon className="w-6 h-6 text-[oklch(0.75_0.12_75)]" />
                 </div>
-                <h3 className="font-display font-semibold text-lg text-[oklch(0.88_0.01_90)] mb-2 group-hover:text-[oklch(0.75_0.12_75)] transition-colors duration-200">
+                <h3 className="font-display font-semibold text-xl text-[oklch(0.16_0.065_258)] mb-3 group-hover:text-[oklch(0.75_0.12_75)] transition-colors duration-200">
                   {service.title}
                 </h3>
-                <p className="font-body text-sm text-[oklch(0.6_0.04_258)] leading-relaxed">
+                <p className="font-body text-sm text-[oklch(0.45_0.04_258)] leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
@@ -583,7 +588,7 @@ export function HomePage() {
       <section
         id="contact"
         data-ocid="contact.section"
-        className="py-20 md:py-32 bg-[oklch(0.17_0.066_258)]"
+        className="py-20 md:py-32 bg-white"
       >
         <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <Section className="text-center mb-14">
@@ -594,13 +599,13 @@ export function HomePage() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="font-display font-semibold text-4xl md:text-5xl text-[oklch(0.92_0.01_90)]"
+              className="font-display font-semibold text-4xl md:text-5xl text-[oklch(0.16_0.065_258)]"
             >
               Let's Talk About Your Financial Future
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="mt-4 font-body text-lg text-[oklch(0.65_0.04_258)] max-w-xl mx-auto"
+              className="mt-4 font-body text-lg text-[oklch(0.45_0.04_258)] max-w-xl mx-auto"
             >
               Reach out to schedule a consultation or ask any questions you
               have.
@@ -637,23 +642,23 @@ export function HomePage() {
                   key={item.title}
                   href={item.href ?? undefined}
                   variants={fadeInUp}
-                  className={`flex items-start gap-5 p-6 bg-[oklch(0.2_0.07_258)] border border-[oklch(0.26_0.065_258)] rounded-sm transition-all duration-200 ${
+                  className={`flex items-start gap-5 p-6 bg-gray-50 border border-gray-200 rounded-sm transition-all duration-200 ${
                     item.href
-                      ? "hover:border-[oklch(0.75_0.12_75/0.4)] hover:bg-[oklch(0.22_0.07_258)] cursor-pointer"
+                      ? "hover:border-[oklch(0.75_0.12_75/0.5)] hover:bg-white cursor-pointer hover:shadow-md"
                       : "cursor-default"
                   }`}
                 >
-                  <div className="w-12 h-12 rounded-sm bg-[oklch(0.75_0.12_75/0.1)] border border-[oklch(0.75_0.12_75/0.2)] flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-sm bg-[oklch(0.75_0.12_75/0.1)] border border-[oklch(0.75_0.12_75/0.25)] flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-5 h-5 text-[oklch(0.75_0.12_75)]" />
                   </div>
                   <div>
-                    <div className="font-body text-xs uppercase tracking-wider text-[oklch(0.6_0.04_258)] mb-1">
+                    <div className="font-body text-xs uppercase tracking-wider text-[oklch(0.5_0.04_258)] mb-1">
                       {item.title}
                     </div>
-                    <div className="font-body font-medium text-[oklch(0.88_0.01_90)] mb-0.5 break-all">
+                    <div className="font-body font-medium text-[oklch(0.16_0.065_258)] mb-0.5 break-all">
                       {item.value}
                     </div>
-                    <div className="font-body text-sm text-[oklch(0.6_0.04_258)]">
+                    <div className="font-body text-sm text-[oklch(0.5_0.04_258)]">
                       {item.sub}
                     </div>
                   </div>
@@ -685,11 +690,11 @@ export function HomePage() {
                   );
                   window.location.href = `mailto:enquiry@wealthtrustinvest.com?subject=${subject}&body=${body}`;
                 }}
-                className="bg-[oklch(0.2_0.07_258)] border border-[oklch(0.26_0.065_258)] rounded-sm p-6 md:p-8 space-y-5"
+                className="bg-gray-50 border border-gray-200 rounded-sm p-6 md:p-8 space-y-5"
               >
                 <div>
                   <label
-                    className="block font-body text-sm font-medium text-[oklch(0.78_0.02_258)] mb-2"
+                    className="block font-body text-sm font-medium text-[oklch(0.25_0.05_258)] mb-2"
                     htmlFor="contact-name"
                   >
                     Your Name
@@ -701,13 +706,13 @@ export function HomePage() {
                     required
                     data-ocid="contact.name_input"
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 bg-[oklch(0.16_0.065_258)] border border-[oklch(0.28_0.06_258)] rounded-sm font-body text-sm text-[oklch(0.85_0.01_90)] placeholder:text-[oklch(0.5_0.03_258)] focus:outline-none focus:border-[oklch(0.75_0.12_75)] focus:ring-1 focus:ring-[oklch(0.75_0.12_75/0.3)] transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-sm font-body text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[oklch(0.75_0.12_75)] focus:ring-1 focus:ring-[oklch(0.75_0.12_75/0.3)] transition-all duration-200"
                   />
                 </div>
 
                 <div>
                   <label
-                    className="block font-body text-sm font-medium text-[oklch(0.78_0.02_258)] mb-2"
+                    className="block font-body text-sm font-medium text-[oklch(0.25_0.05_258)] mb-2"
                     htmlFor="contact-email"
                   >
                     Email Address
@@ -719,13 +724,13 @@ export function HomePage() {
                     required
                     data-ocid="contact.email_input"
                     placeholder="you@example.com"
-                    className="w-full px-4 py-3 bg-[oklch(0.16_0.065_258)] border border-[oklch(0.28_0.06_258)] rounded-sm font-body text-sm text-[oklch(0.85_0.01_90)] placeholder:text-[oklch(0.5_0.03_258)] focus:outline-none focus:border-[oklch(0.75_0.12_75)] focus:ring-1 focus:ring-[oklch(0.75_0.12_75/0.3)] transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-sm font-body text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[oklch(0.75_0.12_75)] focus:ring-1 focus:ring-[oklch(0.75_0.12_75/0.3)] transition-all duration-200"
                   />
                 </div>
 
                 <div>
                   <label
-                    className="block font-body text-sm font-medium text-[oklch(0.78_0.02_258)] mb-2"
+                    className="block font-body text-sm font-medium text-[oklch(0.25_0.05_258)] mb-2"
                     htmlFor="contact-message"
                   >
                     Message
@@ -737,7 +742,7 @@ export function HomePage() {
                     rows={5}
                     data-ocid="contact.message_input"
                     placeholder="Tell us about your financial goals..."
-                    className="w-full px-4 py-3 bg-[oklch(0.16_0.065_258)] border border-[oklch(0.28_0.06_258)] rounded-sm font-body text-sm text-[oklch(0.85_0.01_90)] placeholder:text-[oklch(0.5_0.03_258)] focus:outline-none focus:border-[oklch(0.75_0.12_75)] focus:ring-1 focus:ring-[oklch(0.75_0.12_75/0.3)] transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-sm font-body text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[oklch(0.75_0.12_75)] focus:ring-1 focus:ring-[oklch(0.75_0.12_75/0.3)] transition-all duration-200 resize-none"
                   />
                 </div>
 
@@ -750,7 +755,7 @@ export function HomePage() {
                   <Mail className="ml-2 w-4 h-4" />
                 </Button>
 
-                <p className="font-body text-xs text-[oklch(0.5_0.03_258)] text-center">
+                <p className="font-body text-xs text-[oklch(0.5_0.04_258)] text-center">
                   This will open your email client to send us a message.
                 </p>
               </motion.form>

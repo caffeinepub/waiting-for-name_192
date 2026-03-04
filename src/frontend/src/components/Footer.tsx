@@ -16,13 +16,6 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 flex-shrink-0 rounded-md bg-white p-1 shadow-sm">
-                <img
-                  src="/assets/uploads/wt-1.webp"
-                  alt="Wealth Trust Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
               <div>
                 <div className="font-display font-semibold text-xl text-[oklch(0.92_0.01_90)]">
                   Wealth Trust

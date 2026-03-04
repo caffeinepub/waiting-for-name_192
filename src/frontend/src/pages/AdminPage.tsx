@@ -114,7 +114,7 @@ export function AdminPage() {
               <div className="relative w-16 h-16">
                 <div className="absolute inset-0 rounded-full bg-[oklch(0.75_0.12_75/0.1)] blur-xl" />
                 <img
-                  src="/assets/generated/wealthtrust-logo-transparent.dim_400x400.png"
+                  src="/assets/uploads/WT-logo-1.png"
                   alt="Wealth Trust"
                   className="relative w-full h-full object-contain"
                 />
@@ -288,7 +288,7 @@ export function AdminPage() {
           <div className="flex items-center gap-3">
             <div className="w-7 h-7">
               <img
-                src="/assets/generated/wealthtrust-logo-transparent.dim_400x400.png"
+                src="/assets/uploads/WT-logo-1.png"
                 alt="WT"
                 className="w-full h-full object-contain"
               />
