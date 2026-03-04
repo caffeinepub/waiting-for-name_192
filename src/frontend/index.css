@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* === Wealth Trust Dark Navy + Gold Palette === */
+    /* Primary background: deep navy */
+    --background: 0.16 0.065 258;
+    --foreground: 0.95 0.01 90;
+
+    /* Card: slightly lighter navy */
+    --card: 0.2 0.07 258;
+    --card-foreground: 0.95 0.01 90;
+
+    /* Popover */
+    --popover: 0.22 0.07 258;
+    --popover-foreground: 0.95 0.01 90;
+
+    /* Primary = Gold accent */
+    --primary: 0.75 0.12 75;
+    --primary-foreground: 0.14 0.06 258;
+
+    /* Secondary = muted navy */
+    --secondary: 0.25 0.06 258;
+    --secondary-foreground: 0.85 0.02 90;
+
+    /* Muted */
+    --muted: 0.22 0.05 258;
+    --muted-foreground: 0.65 0.04 258;
+
+    /* Accent = gold tint */
+    --accent: 0.28 0.065 258;
+    --accent-foreground: 0.75 0.12 75;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Borders and inputs */
+    --border: 0.28 0.06 258;
+    --input: 0.26 0.07 258;
+    --ring: 0.75 0.12 75;
+
+    /* Charts */
+    --chart-1: 0.75 0.12 75;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 258;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.645 0.246 16.439;
+
+    /* Sidebar */
+    --sidebar: 0.18 0.07 258;
+    --sidebar-foreground: 0.95 0.01 90;
+    --sidebar-primary: 0.75 0.12 75;
+    --sidebar-primary-foreground: 0.14 0.06 258;
+    --sidebar-accent: 0.28 0.065 258;
+    --sidebar-accent-foreground: 0.75 0.12 75;
+    --sidebar-border: 0.28 0.06 258;
+    --sidebar-ring: 0.75 0.12 75;
+
+    /* Custom brand tokens */
+    --navy: 0.16 0.065 258;
+    --navy-light: 0.22 0.07 258;
+    --navy-muted: 0.28 0.07 258;
+    --gold: 0.75 0.12 75;
+    --gold-muted: 0.65 0.09 75;
+    --gold-bright: 0.82 0.14 78;
+    --cream: 0.96 0.015 85;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+
+  .bg-navy {
+    background-color: oklch(var(--navy));
+  }
+
+  .bg-navy-light {
+    background-color: oklch(var(--navy-light));
+  }
+
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 40px oklch(var(--gold) / 0.15), 0 0 80px oklch(var(--gold) / 0.08);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Prose overrides for blog content */
+  .prose {
+    --tw-prose-body: oklch(0.85 0.02 258);
+    --tw-prose-headings: oklch(0.92 0.01 90);
+    --tw-prose-lead: oklch(0.75 0.02 258);
+    --tw-prose-links: oklch(0.75 0.12 75);
+    --tw-prose-bold: oklch(0.92 0.01 90);
+    --tw-prose-counters: oklch(0.65 0.04 258);
+    --tw-prose-bullets: oklch(0.75 0.12 75);
+    --tw-prose-hr: oklch(0.28 0.06 258);
+    --tw-prose-quotes: oklch(0.92 0.01 90);
+    --tw-prose-quote-borders: oklch(0.75 0.12 75);
+    --tw-prose-captions: oklch(0.65 0.04 258);
+    --tw-prose-code: oklch(0.75 0.12 75);
+    --tw-prose-pre-code: oklch(0.85 0.02 258);
+    --tw-prose-pre-bg: oklch(0.22 0.07 258);
+    --tw-prose-th-borders: oklch(0.28 0.06 258);
+    --tw-prose-td-borders: oklch(0.25 0.06 258);
+  }
+}
