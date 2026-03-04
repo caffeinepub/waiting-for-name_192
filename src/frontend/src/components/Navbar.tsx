@@ -10,7 +10,6 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { toast } from "sonner";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
@@ -52,11 +51,10 @@ export function Navbar() {
 
   function handleClientLogin() {
     setMobileOpen(false);
-    toast.info(
-      "Client portal coming soon! We're working on it. Contact us for access.",
-      {
-        duration: 5000,
-      },
+    window.open(
+      "https://login.wealthtrustinvest.com/login",
+      "_blank",
+      "noopener,noreferrer",
     );
   }
 
